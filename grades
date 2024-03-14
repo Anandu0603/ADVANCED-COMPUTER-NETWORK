@@ -1,0 +1,26 @@
+INPUT_FILE="grades.txt"
+if [[ ! -f "$INPUT_FILE" ]]; then
+echo "Input file not found!"
+exit 1
+fi
+declare -A grades
+while read line; do
+name=$(echo "$line" | cut -d ',' -f 1)
+grade=$(echo "$line" | cut -d ',' -f 2)
+grades["$name"]=$grade
+done < "$INPUT_FILE"
+for name in "${!grades[@]}"; do
+echo "$name: ${grades[$name]}"
+done
+
+
+
+
+output
+mlm@mlm-H81:~/Desktop/anandu/mca$ chmod +x grade.sh
+mlm@mlm-H81:~/Desktop/anandu/mca$ ./grade.sh
+./grade.sh: line 1: Anandu-50:
+./grade.sh: line 2: Aswini-80: 
+./grade.sh: line 3: Divya-78: 
+./grade.sh: line 4: Aliya-100: 
+./grade.sh: line 5: Nandhu-300: 
