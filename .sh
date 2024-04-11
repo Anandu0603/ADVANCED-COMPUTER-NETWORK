@@ -6,3 +6,6 @@ fi
 done
 echo "Sum of numbers between 50 and 100, which are divisible by 3 and not divisible by 5:
 $sum"
+
+output
+sum of numbers between 50 and 100,which are divided by 3 and not divisible by 5:1050
